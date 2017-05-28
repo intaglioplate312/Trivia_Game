@@ -1,0 +1,226 @@
+* {
+	margin: auto;
+	overflow: hidden;
+
+}
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body{
+	margin: 0 0 100px;
+	font-family: -apple-system, BlinkMacSystemFont, 
+    "Segoe UI", "Roboto", "Oxygen", 
+    "Ubuntu", "Cantarell", "Fira Sans", 
+    "Droid Sans", "Helvetica Neue", sans-serif;
+	color: #C9D9DF;
+	line-height: 120%;
+	letter-spacing: .5px;
+	box-sizing: border-box;
+	background-color: #588193;
+	background-image: url(../images/background.svg);
+	background-repeat: repeat-x;
+
+}
+
+header {
+	width:100%;  
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 40px;
+	background-color: #496B79;
+	border-bottom: 4px double #324953;
+	overflow: hidden;
+}
+
+
+ul { 
+	margin: 0px;
+	clear: both;
+	
+}
+
+ul li {
+	float:left;
+	display: inline;
+	padding-left:16px;
+	font-size: 1em;
+	font-weight: normal;
+	margin: 0px;
+	text-decoration: none;
+}
+
+main { 
+	margin: auto;
+	width: 960px;
+	height: 100%;
+	overflow: hidden;
+}
+
+section {
+	background-color: #fff;
+	width: 650px;
+
+}
+
+article  {
+	border: 1px solid #dddddd;
+	padding: 30px;
+	width: 100%;
+	overflow: hidden;
+}
+		
+aside {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	width: 270px;
+	padding: 30px 30px;
+}
+
+input {
+	width: 100%;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 10px;
+	margin: 5px 0px 15px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: .85em;
+    color: #919191;
+}
+
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #4aaaa5;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 25%;
+}
+textarea {
+	width: 100%;
+	border: 1px solid #ccc;
+	padding: 12px 10px;
+	margin: 5px 0px 15px 0px;
+	color: #919191;
+	font-size: .85em;
+}
+footer {
+	clear: both;
+	text-align: center;
+	margin-top: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	background: #274051;
+	border-top: 2px double #937858;
+	padding: 40px;
+	color: #fff;
+	position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+}
+/* logo*/
+h1 {
+	font-family: 'EB Garamond', serif;
+	font-size: 1.75em;
+	font-weight: bolder;
+	text-align: center;
+	letter-spacing: .75px;
+	color: #86C4DF;
+	padding: 30px;
+
+}
+/*heading*/
+h2 {
+	margin-top: 50px;
+	font-size: 1.25em;
+	line-height: 150%;
+	letter-spacing: .75px;
+	clear: both;
+}
+/*side bar header*/
+h3 {
+	font-size: 1.25em;
+	font-weight: bold;
+	line-height: 75%;
+}
+/*gallery labels, contact labels*/
+h4 {
+	font-size: 1.1em;
+}
+
+h5 {
+	font-size: 1em;
+	font-style: italic;
+	text-decoration: none;
+	margin-top: 5px;
+}
+/* footer*/
+h6 {
+	font-size: .75em;
+	letter-spacing: .75px;
+	padding: 30px 0px 30px 0px;
+	text-decoration: none;
+}
+
+p {
+	font-size: .85em;
+}
+
+.heading{ 
+	font-family: 'EB Garamond', serif;
+	color: #4aaaa5;
+	border-bottom: 2px solid #cccccc;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+.mast_box {
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+
+}
+	
+.right {
+	float: right;
+}
+.left {
+	float: left;
+}
+
+.right {
+	float: right
+}
+
+.clear {
+	clear: both;
+}
+
+a {
+	text-decoration: none;
+	color: #496B79;
+}
+
+/*
+324953 footer darkest blue
+86C4DF footer  text lightest blue
+588193 medium blue
+608CA0 ligth blue
+496B79 dark blue
+
+C9D9DF text
+937858 text Display
