@@ -28,65 +28,61 @@
 	</header>
 
 	<main>
-		<p> Game instructions ... Twas brillig, and the slithy toves <br />
-		Did gyre and gimble in the wabe; <br />
-		All mimsy were the borogoves, <br />
-		And the mome raths outgrabe.</p>
-
-		<h2 id="question1"> Question 1</h2>	
+	
+		  <p class="test"> Click Here To Start <br/> <span id="time"></span> </p>
+		
+Total Score:
+<input type="text" name="sum" />
+		<form method="post" action="/form" autocomplete="off">
+		<!--Don't let the player pick more than one answer per question. keep name = per answer set-->
+		<h2 id="question1"> Adler &amp; Sullivan is the oldest Architectural Firm in Chicago</h2>	
 		<ul> 
-		<li> answer </li>
-		<li> answer </li>
-		<li> answer </li>
-		<li> answer </li>
-		<li> answer </li>
+		<li> <input class="calc" type="radio" name="answer1" value="0"> </li>
+		<li> True </li>
+		<li> <input class="calc"  type="radio" name="answer1" value="1"> </li>
+		<li> False </li>
 		</ul>	
 		
-		<h2 id="question2"> Question 2</h2>	
+		<h2 id="question2"> Fazlur Rahman Khan was the structural engineer for the Sears Tower</h2>	
 		<ul> 
-		<li> answer </li>
-		<li> answer </li>
-		<li> answer </li>
-		<li> answer </li>
-		<li> answer </li>
+		<li> <input class="calc"  type="radio" name="answer2" value="1"> </li>
+		<li> True </li>
+		<li> <input class="calc"  type="radio" name="answer2" value="0"> </li>
+		<li> False </li>
 		</ul>	
 
-		<h2 id="question3"> Question 3</h2>	
+		<h2 id="question3"> Audie Murphy was a member of the Western Association of Architects</h2>	
 		<ul> 
-		<li> answer </li>
-		<li> answer </li>
-		<li> answer </li>
-		<li> answer </li>
-		<li> answer </li>
+		<li> <input class="calc" type="radio" name="answer3" value="0"> </li>
+		<li> True </li>
+		<li> <input class="calc" type="radio" name="answer3" value="1"> </li>
+		<li> False </li>
 		</ul>	
 
-		<h2 id="question4"> Question 4</h2>	
+		<h2 id="question4"> Avery Coonley House is the only Frank Lloyd Wright house is in Chicago</h2>	
 		<ul> 
-		<li> answer </li>
-		<li> answer </li>
-		<li> answer </li>
-		<li> answer </li>
-		<li> answer </li>
+		<li> <input class="calc" type="radio" name="answer4" value="0" > </li>
+		<li> True </li>
+		<li> <input class="calc" type="radio" name="answer4" value="1" > </li>
+		<li> False </li>
 		</ul>	
 
-		<h2 id="question5"> Question 5</h2>	
+		<h2 id="question5"> Psy heads Studio Gang Architects</h2>	
 		<ul> 
-		<li> answer </li>
-		<li> answer </li>
-		<li> answer </li>
-		<li> answer </li>
-		<li> answer </li>
+		<li> <input class="calc" type="radio" name="answer5" value="0"> </li>
+		<li> True </li>
+		<li> <input class="calc" type="radio" name="answer5" value="1"> </li>
+		<li> False </li>
 		</ul>	
 
-		<h2 id="question6"> Question 6</h2>	
+		<h2 id="question6"> The Aqua 10th tallest building in Chicago</h2>	
 		<ul> 
-		<li> answer </li>
-		<li> answer </li>
-		<li> answer </li>
-		<li> answer </li>
-		<li> answer </li>
+		<li> <input class="calc" type="radio" name="answer6" value="1"> </li>
+		<li> True </li>
+		<li> <input class="calc" type="radio" name="answer6" value="0"> </li>
+		<li> False </li>
 		</ul>	
-		
+		</form>
 
 	</main>
 
@@ -101,7 +97,10 @@
 
 
 
-
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
+		
 	<script type="text/javascript" src="assets/javascript/game.js"></script>
 
 
