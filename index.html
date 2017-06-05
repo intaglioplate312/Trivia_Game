@@ -15,82 +15,82 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 		<!--google font -->
 		<link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet"> 
-		<!-- Latest compiled and minified CSS
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
-		<!-- Optional theme
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
 		<!--Local CSS-->
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	</head>
 		
 	<header>
+		<div class="mast_box">
+			<img src="assets/images/city.png" alt="Chicago skyline in blue" >
 			<h1> Chicago Architecture Triva Game</h1>
+		</div><!--closes mast_box-->
 	</header>
 
 	<main>
+		<div class="mast_box">
+		<h3 id="test"> The Clock is Ticking!! <br/> <span id="time"></span> </h3>
+			<!--autocmplete needed to clear out checked radio buttons-->
+			<form method="post" action="/form" autocomplete="off">
+				<!--Don't let the player pick more than one answer per question. keep name = per answer set-->
+				<h2 id="question1"> Adler &amp; Sullivan is the oldest Architectural Firm in Chicago</h2>	
+					<ul> 
+						<li> <input class="calc" type="radio" name="answer1" value="0"> </li>
+						<li> True </li>
+						<li> <input class="calc"  type="radio" name="answer1" value="1"> </li>
+						<li> False </li>
+					</ul>	
+				
+				<h2 id="question2"> Fazlur Rahman Khan was the structural engineer for the Sears Tower</h2>	
+					<ul> 
+						<li> <input class="calc"  type="radio" name="answer2" value="1"> </li>
+						<li> True </li>
+						<li> <input class="calc"  type="radio" name="answer2" value="0"> </li>
+						<li> False </li>
+				</ul>	
+
+				<h2 id="question3"> Audie Murphy was a member of the Western Association of Architects</h2>	
+					<ul> 
+						<li> <input class="calc" type="radio" name="answer3" value="0"> </li>
+						<li> True </li>
+						<li> <input class="calc" type="radio" name="answer3" value="1"> </li>
+						<li> False </li>
+					</ul>	
+
+				<h2 id="question4"> Avery Coonley House is the only Frank Lloyd Wright house is in Chicago</h2>	
+					<ul> 
+						<li> <input class="calc" type="radio" name="answer4" value="0" > </li>
+						<li> True </li>
+						<li> <input class="calc" type="radio" name="answer4" value="1" > </li>
+						<li> False </li>
+					</ul>	
+
+				<h2 id="question5"> Psy heads Studio Gang Architects</h2>	
+					<ul> 
+						<li> <input class="calc" type="radio" name="answer5" value="0"> </li>
+						<li> True </li>
+						<li> <input class="calc" type="radio" name="answer5" value="1"> </li>
+						<li> False </li>
+					</ul>	
+
+				<h2 id="question6"> The Aqua 10th tallest building in Chicago</h2>	
+					<ul> 
+						<li> <input class="calc" type="radio" name="answer6" value="1"> </li>
+						<li> True </li>
+						<li> <input class="calc" type="radio" name="answer6" value="0"> </li>
+						<li> False </li>
+					</ul>	
+					<br />
+				<input type="text" name="sum" />
+			</form>
+		</div><!--closes mast_box-->
+		</div><!--closes main -->
 	
-		  <p class="test"> Click Here To Start <br/> <span id="time"></span> </p>
-		
-Total Score:
-<input type="text" name="sum" />
-		<form method="post" action="/form" autocomplete="off">
-		<!--Don't let the player pick more than one answer per question. keep name = per answer set-->
-		<h2 id="question1"> Adler &amp; Sullivan is the oldest Architectural Firm in Chicago</h2>	
-		<ul> 
-		<li> <input class="calc" type="radio" name="answer1" value="0"> </li>
-		<li> True </li>
-		<li> <input class="calc"  type="radio" name="answer1" value="1"> </li>
-		<li> False </li>
-		</ul>	
-		
-		<h2 id="question2"> Fazlur Rahman Khan was the structural engineer for the Sears Tower</h2>	
-		<ul> 
-		<li> <input class="calc"  type="radio" name="answer2" value="1"> </li>
-		<li> True </li>
-		<li> <input class="calc"  type="radio" name="answer2" value="0"> </li>
-		<li> False </li>
-		</ul>	
-
-		<h2 id="question3"> Audie Murphy was a member of the Western Association of Architects</h2>	
-		<ul> 
-		<li> <input class="calc" type="radio" name="answer3" value="0"> </li>
-		<li> True </li>
-		<li> <input class="calc" type="radio" name="answer3" value="1"> </li>
-		<li> False </li>
-		</ul>	
-
-		<h2 id="question4"> Avery Coonley House is the only Frank Lloyd Wright house is in Chicago</h2>	
-		<ul> 
-		<li> <input class="calc" type="radio" name="answer4" value="0" > </li>
-		<li> True </li>
-		<li> <input class="calc" type="radio" name="answer4" value="1" > </li>
-		<li> False </li>
-		</ul>	
-
-		<h2 id="question5"> Psy heads Studio Gang Architects</h2>	
-		<ul> 
-		<li> <input class="calc" type="radio" name="answer5" value="0"> </li>
-		<li> True </li>
-		<li> <input class="calc" type="radio" name="answer5" value="1"> </li>
-		<li> False </li>
-		</ul>	
-
-		<h2 id="question6"> The Aqua 10th tallest building in Chicago</h2>	
-		<ul> 
-		<li> <input class="calc" type="radio" name="answer6" value="1"> </li>
-		<li> True </li>
-		<li> <input class="calc" type="radio" name="answer6" value="0"> </li>
-		<li> False </li>
-		</ul>	
-		</form>
-
-	</main>
 
 	<footer>
 		<div class="mast_box">
 			<a href="https://github.com/intaglioplate312/week-4-game" target="_blank"><img src="assets/images/github_icon.svg" alt="github logo" width="30" height="30"></a>
 			<a href="https://justofflakeshoredrive.com" target="_blank"><h5> justofflsd.com </h5></a>
-			</div><!--closes mast_box-->
+		</div><!--closesmast_box-->
 	</footer>
 
 

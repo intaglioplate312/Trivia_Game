@@ -18,9 +18,8 @@ body{
 	line-height: 120%;
 	letter-spacing: .5px;
 	box-sizing: border-box;
-	background-color: #588193;
-	background-image: url(../images/background.svg);
-	background-repeat: repeat-x;
+	background-color: #274051;
+
 
 }
 
@@ -29,9 +28,9 @@ header {
 	margin-right: auto;
 	margin-left: auto;
 	margin-bottom: 40px;
-	background-color: #496B79;
-	border-bottom: 4px double #324953;
+	background-color: #588193;
 	overflow: hidden;
+	align-content: center;;
 }
 
 
@@ -87,40 +86,19 @@ input[type=text] {
     padding: 12px 10px;
 	margin: 5px 0px 15px 0px;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid #496B79;
     box-sizing: border-box;
     font-size: .85em;
-    color: #919191;
+    color: #608CA0;
+    background-color: #324953;
 }
 
-
-input[type=button], input[type=submit], input[type=reset] {
-    background-color: #4aaaa5;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
-    font-size: 1em;
-    width: 25%;
-}
-textarea {
-	width: 100%;
-	border: 1px solid #ccc;
-	padding: 12px 10px;
-	margin: 5px 0px 15px 0px;
-	color: #919191;
-	font-size: .85em;
-}
 footer {
 	clear: both;
 	text-align: center;
 	margin-top: 5px;
 	margin-right: auto;
 	margin-left: auto;
-	background: #274051;
-	border-top: 2px double #937858;
 	padding: 40px;
 	color: #fff;
 	position: absolute;
@@ -137,22 +115,23 @@ h1 {
 	text-align: center;
 	letter-spacing: .75px;
 	color: #86C4DF;
-	padding: 30px;
+	padding-bottom: 15px;
 
 }
 /*heading*/
 h2 {
-	margin-top: 50px;
+	margin-top: 40px;
 	font-size: 1em;
-	line-height: 150%;
+	line-height: 120%;
 	letter-spacing: .75px;
 	clear: both;
 }
 /*side bar header*/
 h3 {
-	font-size: 1.25em;
+	font-size: 1em;
 	font-weight: bold;
-	line-height: 75%;
+	line-height: 120%;
+	text-align: center;
 }
 /*gallery labels, contact labels*/
 h4 {
@@ -186,7 +165,7 @@ p {
 }
 
 .mast_box {
-	width: 960px;
+	width: 800px;
 	margin-right: auto;
 	margin-left: auto;
 	height: 100%;
@@ -216,9 +195,11 @@ a {
 }
 
 .test {
-	color: red;
+	color: #937858;
 }
-
+img {
+	width: 100%;
+}
 /*
 324953 footer darkest blue
 86C4DF footer  text lightest blue
