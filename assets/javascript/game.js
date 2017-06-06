@@ -2,32 +2,50 @@
 $(document).ready(function() {
 //rethinking one day reprieve
 // start 
-// strt button 
+// start button 
 // clear
+
 // start timer
 // show questions
 // stop timer
 // clear questions
-// push results
 
+var correctAnswer = 0;
+var incorrectAnswer = 0;
+var missedAnswer = 0;
+var time = 30;
+//Setting a variable to equal an interval, which will essentially subtract 1 from the timer every second.
+var timer = setInterval(counter, 1000);
+
+    //The function that works with the timer on the game.  Once the time reaches 0, certain content will clear out, to allow for the scoring div to appear.
+    function counter(){
+        time = time - 1;
+        if (time <= 0){
+            clear();
+            stats();
+            $("#main-content").hide();
+            $("#finish").show();
+
+        }
+        //This replaces the element in the HTML of "counter" to alert the user of how many seconds are remaining.
+        document.getElementById("counter").innerHTML = "The Clock is Ticking!! " + time + " seconds remaining";
+
+    };
+
+
+// stop timer
+// clear questions
+//The function that will clear out the timer once the user is finished.
+    function clear(){
+        clearInterval(timer);
+    };
 
 // You'll create a trivia form with multiple choice or true/false options (your choice).
 //The player will have a limited amount of time to finish the quiz. 
 // The game ends when the time runs out. The page will reveal the number of questions that players answer correctly and incorrectly.
 //Timer logic
 
-var count=25;
-var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
 
-function timer(){
-    count=count-1;
-    if (count <= -1){
-     clearInterval(counter);
-     return;
-    }
-
-document.getElementById("time").innerHTML= "you have " + count + " seconds to complete game."; // watch for spelling
-};
 
 
 

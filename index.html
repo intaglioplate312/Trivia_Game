@@ -25,119 +25,122 @@
 	<script type="text/javascript" src="assets/javascript/game.js"></script>
 
 </head>
-
 <body>
 	<div class="header">
 		<div class="mast_box">
 			<h1>Smelly Onion Trivia</h1>
-			<button type="submit" value="Submit">Start</button>
+			<button type="button" class="start">Start</button>
 		</div>
 
 
 
-		<div id="container">
-			<h3 id="test"> The Clock is Ticking!! <br/> <span id="time"></span> </h3>
+		<div id="main-content">
+			<h3 id="counter">Seconds Remaining: </h3>
+
 
 
 			<form method="post" action="/form" autocomplete="off">
 			  	
 			    	<h2>Who said &#8220;Make no small plans&#8221; ? </h2>
 			    		<ul>
-				    		<li><input type="radio" name="q1" value="wrong"> Richard J. Daley
-				    		<li><input type="radio" name="q1" value="right"> Daniel Burnham
-				    		<li><input type="radio" name="q1" value="wrong"> Louis Sullivan
-				    		<li><input type="radio" name="q1" value="wrong"> Frederick Law Olmsted
-				    		<li><input type="radio" name="q1" value="wrong"> Al Capone
+				    		<li><input type="radio" name="q1" value="incorrect"> Richard J. Daley
+				    		<li><input type="radio" name="q1" value="correct"> Daniel Burnham
+				    		<li><input type="radio" name="q1" value="incorrect"> Louis Sullivan
+				    		<li><input type="radio" name="q1" value="incorrect"> Frederick Law Olmsted
+				    		<li><input type="radio" name="q1" value="incorrect"> Al Capone
 						</ul>
 
 			    	<h2>Which Firm designed the Chicago Stock Exchange Building from 1893? </h2>
 				    	<ul>
-				    		<li><input type="radio" name="q2" value="right"> Adler &amp; Sullivan </li>
-				    		<li><input type="radio" name="q2" value="wrong"> Jones Lang LaSalle </li>
-				    		<li><input type="radio" name="q2" value="wrong"> Goldman Sachs </li>
-				    		<li><input type="radio" name="q2" value="wrong"> Adrian Smith &amp; Gordon Gill </li>
-				    		<li><input type="radio" name="q2" value="wrong"> Perkins and Will </li>
+				    		<li><input type="radio" name="q2" value="correct"> Adler &amp; Sullivan </li>
+				    		<li><input type="radio" name="q2" value="incorrect"> Jones Lang LaSalle </li>
+				    		<li><input type="radio" name="q2" value="incorrect"> Goldman Sachs </li>
+				    		<li><input type="radio" name="q2" value="incorrect"> Adrian Smith &amp; Gordon Gill </li>
+				    		<li><input type="radio" name="q2" value="incorrect"> Perkins and Will </li>
 						</ul>
 						
 
 			    	<h2>Who was not a member of the Western Association of Architects? </h2>
 				    	<ul>
-				    		<li><input type="radio" name="q3" value="wrong"> John Root </li>
-				    		<li><input type="radio" name="q3" value="wrong"> Daniel Burnham </li>
-				    		<li><input type="radio" name="q3" value="right"> Audie Murphy </li>
-				    		<li><input type="radio" name="q3" value="wrong"> Dankmar Adler </li>
-				    		<li><input type="radio" name="q3" value="wrong"> Louis Sullivan </li>
+				    		<li><input type="radio" name="q3" value="incorrect"> John Root </li>
+				    		<li><input type="radio" name="q3" value="incorrect"> Daniel Burnham </li>
+				    		<li><input type="radio" name="q3" value="correct"> Audie Murphy </li>
+				    		<li><input type="radio" name="q3" value="incorrect"> Dankmar Adler </li>
+				    		<li><input type="radio" name="q3" value="incorrect"> Louis Sullivan </li>
 						</ul>
 						
 			  	
 			    	<h2>What was the original name of the Aon Center </h2>
 				    	<ul>
-				    		<li><input type="radio" name="q4" value="wrong"> BP Center </li>
-				    		<li><input type="radio" name="q4" value="wrong"> Prudential Center </li>
-				    		<li><input type="radio" name="q4" value="right"> Standard Oil Building </li>
-				    		<li><input type="radio" name="q4" value="wrong"> The Blackstone Center </li>
-				    		<li><input type="radio" name="q4" value="wrong"> Amoco Building </li>
+				    		<li><input type="radio" name="q4" value="incorrect"> BP Center </li>
+				    		<li><input type="radio" name="q4" value="incorrect"> Prudential Center </li>
+				    		<li><input type="radio" name="q4" value="correct"> Standard Oil Building </li>
+				    		<li><input type="radio" name="q4" value="incorrect"> The Blackstone Center </li>
+				    		<li><input type="radio" name="q4" value="incorrect"> Amoco Building </li>
 						</ul>
 						
 			    	
 			    	<h2>Which Frank Lloyd Wright building is in Chicago? </h2>
 				    	<ul>
-				    		<li><input type="radio" name="q5" value="wrong"> Avery Coonley House </li>
-				    		<li><input type="radio" name="q5" value="right"> Robie House </li>
-				    		<li><input type="radio" name="q5" value="wrong"> Bleak House </li>
-				    		<li><input type="radio" name="q5" value="wrong"> Ennis House </li>
-				    		<li><input type="radio" name="q5" value="wrong"> Westcott House </li>
+				    		<li><input type="radio" name="q5" value="incorrect"> Avery Coonley House </li>
+				    		<li><input type="radio" name="q5" value="correct"> Robie House </li>
+				    		<li><input type="radio" name="q5" value="incorrect"> Bleak House </li>
+				    		<li><input type="radio" name="q5" value="incorrect"> Ennis House </li>
+				    		<li><input type="radio" name="q5" value="incorrect"> Westcott House </li>
 						</ul>
 						
 			
 			    	<h2>Which 10th tallest building in Chicago </h2>
 				    	<ul>
-				    		<li><input type="radio" name="q6" value="wrong"> Prudential Plaza </li>
-				    		<li><input type="radio" name="q6" value="wrong"> Harbor Point </li>
-				    		<li><input type="radio" name="q6" value="right"> The Aqua </li>
-				    		<li><input type="radio" name="q6" value="wrong"> Water Tower </li>
-				    		<li><input type="radio" name="q6" value="wrong"> Willis Tower </li>
+				    		<li><input type="radio" name="q6" value="incorrect"> Prudential Plaza </li>
+				    		<li><input type="radio" name="q6" value="incorrect"> Harbor Point </li>
+				    		<li><input type="radio" name="q6" value="correct"> The Aqua </li>
+				    		<li><input type="radio" name="q6" value="incorrect"> Water Tower </li>
+				    		<li><input type="radio" name="q6" value="incorrect"> Willis Tower </li>
 						</ul>
 						
 			  
 			    	<h2>Who heads Studio Gang Architects? </h2>
 				    	<ul>
-				    		<li><input type="radio" name="q7" value="wrong"> Psy </li>
-				    		<li><input type="radio" name="q7" value="wrong"> James Gang </li>
-				    		<li><input type="radio" name="q7" value="wrong"> Olsen Gang </li>
-				    		<li><input type="radio" name="q7" value="right"> Jeanne Gang </li>
-				    		<li><input type="radio" name="q7" value="wrong"> Dalton Gang </li>
+				    		<li><input type="radio" name="q7" value="incorrect"> Psy </li>
+				    		<li><input type="radio" name="q7" value="incorrect"> James Gang </li>
+				    		<li><input type="radio" name="q7" value="incorrect"> Olsen Gang </li>
+				    		<li><input type="radio" name="q7" value="correct"> Jeanne Gang </li>
+				    		<li><input type="radio" name="q7" value="incorrect"> Dalton Gang </li>
 						</ul>
 						
 			 
 			    	<h2>Who was the structural engineer for the Sears Tower? </h2>
 				    	<ul>
-				    		<li><input type="radio" name="q8" value="right"> Fazlur Rahman Khan </li>
-				    		<li><input type="radio" name="q8" value="wrong"> John Reeve </li>
-				    		<li><input type="radio" name="q8" value="wrong"> Bruce Graham </li>
-				    		<li><input type="radio" name="q8" value="wrong"> Alvah Roebuck </li>
-				    		<li><input type="radio" name="q8" value="wrong"> Louis Skidmore </li>
+				    		<li><input type="radio" name="q8" value="correct"> Fazlur Rahman Khan </li>
+				    		<li><input type="radio" name="q8" value="incorrect"> John Reeve </li>
+				    		<li><input type="radio" name="q8" value="incorrect"> Bruce Graham </li>
+				    		<li><input type="radio" name="q8" value="incorrect"> Alvah Roebuck </li>
+				    		<li><input type="radio" name="q8" value="incorrect"> Louis Skidmore </li>
 						</ul>
 						
 			  
 			    	<h2>Which Firm is still in operation today? </h2>
 				    	<ul>
-				    		<li><input type="radio" name="q9" value="wrong"> Holabird &amp; Simonds </li>
-				    		<li><input type="radio" name="q9" value="wrong"> Laurel &amp; Hardy </li>
-				    		<li><input type="radio" name="q9" value="wrong"> Adler &amp; Sullivan </li>
-				    		<li><input type="radio" name="q9" value="wrong"> Martin &amp; Lewis </li>
-				    		<li><input type="radio" name="q9" value="right"> Holabird &amp; Root </li>
+				    		<li><input type="radio" name="q9" value="incorrect"> Holabird &amp; Simonds </li>
+				    		<li><input type="radio" name="q9" value="incorrect"> Laurel &amp; Hardy </li>
+				    		<li><input type="radio" name="q9" value="incorrect"> Adler &amp; Sullivan </li>
+				    		<li><input type="radio" name="q9" value="incorrect"> Martin &amp; Lewis </li>
+				    		<li><input type="radio" name="q9" value="correct"> Holabird &amp; Root </li>
 						</ul>
 						
 			    	
-			    	</form>
+<ul>			    	</form>
 	
 			
-			<input type="text" name="sum" style="text-align: center;">
-			</form>
-		</div><!--closes mast_box-->
-		</div><!--closes main -->
-	
+			<div id="submit">
+				
+				<button type="button" class="submit">Can't Wait!!</button>
+			</div>
+		</div>
+	</div>
+
+
 
 	<footer>
 		<div class="mast_box">
