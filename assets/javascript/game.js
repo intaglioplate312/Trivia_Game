@@ -1,3 +1,12 @@
+//rethinking one day reprieve
+// start 
+// strt button 
+// clear
+// start timer
+// show questions
+// stop timer
+// clear questions
+// push results
 
 
 // You'll create a trivia form with multiple choice or true/false options (your choice).
