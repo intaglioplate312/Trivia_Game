@@ -1,3 +1,5 @@
+
+$(document).ready(function() {
 //rethinking one day reprieve
 // start 
 // strt button 
@@ -77,4 +79,7 @@ $().ready(function(){
 //Don't let the player pick more than one answer per question.
 
 //Don't forget to include a countdown timer.
+
+ }); //ends (document).ready(function() frome line 1 
+
 
