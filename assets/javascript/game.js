@@ -1,24 +1,32 @@
 
 $(document).ready(function() {
 //rethinking one day reprieve
-// start 
-// start button 
-// clear
-
-// start timer
-// show questions
-// stop timer
-// clear questions
-
+//To start, hide then show
+    $("#main-content").hide();
+    // start button, start timer
+    $(".start").click(function(){
+        $(".start").hide();
+        // show questions
+        $("#main-content").show();
+        $("#finish").hide();
+    });
+    // stop timer
+    $("#submit").click(function(){
+        // clear questions
+        $("#main-content").hide();
+        $("#finish").show();
+    });
+    
+//Declaring variables 
 var correctAnswer = 0;
 var incorrectAnswer = 0;
 var missedAnswer = 0;
-var time = 30;
-//Setting a variable to equal an interval, which will essentially subtract 1 from the timer every second.
-var timer = setInterval(counter, 1000);
+var time = 45;
+//Subtract 1 from the timer every second.
+var timer = setInterval(countDown, 1000);
 
-    //The function that works with the timer on the game.  Once the time reaches 0, certain content will clear out, to allow for the scoring div to appear.
-    function counter(){
+//The function that works with the timer on the game.  Once the time reaches 0, certain content will clear out, to allow for the scoring div to appear.
+    function countDown(){
         time = time - 1;
         if (time <= 0){
             clear();
@@ -27,12 +35,17 @@ var timer = setInterval(counter, 1000);
             $("#finish").show();
 
         }
-        //This replaces the element in the HTML of "counter" to alert the user of how many seconds are remaining.
-        document.getElementById("counter").innerHTML = "The Clock is Ticking!! " + time + " seconds remaining";
+        //This replaces the element in the HTML of "countDown" to alert the user of how many seconds are remaining.
+        document.getElementById("countDown").innerHTML = "The Clock is Ticking!! " + time + " seconds remaining";
 
     };
 
 
+    //Submit button, to end game.
+    $("#submit").click(function(){
+        $("#main-content").hide();
+        stats();
+    });
 // stop timer
 // clear questions
 //The function that will clear out the timer once the user is finished.
@@ -56,33 +69,34 @@ var timer = setInterval(counter, 1000);
 //  startTimer(timer, display);
 //  });
 
-
-// at end of timer 
 //MDN sample to try if time allows
-//$( "input[type=value].tags" ).val(function( index, value ) {
-//return value.trim();
-//});
+    //$( "input[type=radio].tags" ).val(function( index, value ) {
+    //return value.trim();
+    //});
+    //The function for loop for results.
+    function stats(){
+        correctAnswer = 0;
+        incorrectAnswer = 0;
+        missedAnswer =0;
+        //Creating a for-loop, that will loop through each of the radio.  It will then check to see if the button is both, clicked, and whether it has a label of "right" or "incorrect."
+        for (var i = 0; i < 10; i++) {
+            var radios = document.getElementsByName('q'+i);
+            for (var n = 0; n < radios.length; n++) {
+                var radio = radios[n];
+                //If the input is clicked, and correct, it will add 1 to the users correct answer count.
+                if (radio.value === "correct" && radio.checked){
+                    correctAnswer++
+                //However, if the input is clicked, and incorrect, it will add 1 to the users incorrect answer count.
+                }else if (radio.value === "incorrect" && radio.checked){
+                    incorrectAnswer++
+                } // else if radio.value === ("incorrect" || "correct") && radio.checked){
+                //missedAns++
+                //}
 
-
-
-var correctAnswer = 0;
-// should work but too simple??
-var incorrectAnswer = 6 - correctAnswer;
-
-//Correct answer function
-function correct(){
-    var correctAnswer = 0;
-    $(".calc:checked").each(function(){
-        correctAnswer+=parseInt($(this).val(),10);
-    });
-    $("input[name=sum]").val(correctAnswer) 
-}
-$().ready(function(){
-    $(".calc").change(function(){
-        correct()
-    });
-});
-
+            }
+      console.log(correctAnswer);
+      console.log(incorrectAnswer)
+      console.log(missedAnswer)
           
 // run function to add all on clicks matching true and return as "you matched"
 // add all clicks matching false or none retun as "you missed"
