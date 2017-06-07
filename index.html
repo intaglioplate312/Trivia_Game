@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 	<head>
-		<meta charset="utf-8">    	
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-
+		<meta charset="utf-8">  
+		<!--not responsive
+		<meta name="viewport" content="width=device-width, initial-scale=1">-->  	
 		<!--meta name=”description” content=”155 characters of message matching text with a call to action goes here”-->
 		<meta name=”description” content="Chicago Architecture Triva Game, Northwestern Coding Bootcamp javaScritpt and jQuery homework.">
 			<!-- Up to 70 Characters of Keyword-relevant text here -->
@@ -22,26 +22,26 @@
 			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 			  crossorigin="anonymous"></script>
 		
-	<script type="text/javascript" src="assets/javascript/game.js"></script>
+		<script type="text/javascript" src="assets/javascript/game.js"></script>
 
 </head>
 <body>
+
 	<div class="header">
 		<div class="mast_box">
-			<h1>Smelly Onion Trivia</h1>
-			<button type="button" class="start">Start</button>
-		</div>
+				<h1>Chicago<br>Architecture<br>Trivia Game</h1>
+				<button type="button" class="start">Start</button>
+		</div><!--close mast_box-->
+	</div><!--close header-->
 
 
-
-		<div id="main-content">
-			<h3 id="counter">Seconds Remaining: </h3>
-
-
+	<main id="main-content">
+			
+		<h3 id="countDown">Seconds Remaining: </h3>
 
 			<form method="post" action="/form" autocomplete="off">
 			  	
-			    	<h2>Who said &#8220;Make no small plans&#8221; ? </h2>
+			    	<h2>Who said &#8220;Make no small plans&#8221;? </h2>
 			    		<ul>
 				    		<li><input type="radio" name="q1" value="incorrect"> Richard J. Daley
 				    		<li><input type="radio" name="q1" value="correct"> Daniel Burnham
@@ -70,7 +70,7 @@
 						</ul>
 						
 			  	
-			    	<h2>What was the original name of the Aon Center </h2>
+			    	<h2>What was the original name of the Aon Center? </h2>
 				    	<ul>
 				    		<li><input type="radio" name="q4" value="incorrect"> BP Center </li>
 				    		<li><input type="radio" name="q4" value="incorrect"> Prudential Center </li>
@@ -90,7 +90,7 @@
 						</ul>
 						
 			
-			    	<h2>Which 10th tallest building in Chicago </h2>
+			    	<h2>Which 10th tallest building in Chicago? </h2>
 				    	<ul>
 				    		<li><input type="radio" name="q6" value="incorrect"> Prudential Plaza </li>
 				    		<li><input type="radio" name="q6" value="incorrect"> Harbor Point </li>
@@ -120,37 +120,34 @@
 						</ul>
 						
 			  
-			    	<h2>Which Firm is still in operation today? </h2>
+			    	<h2>Founded in 1880, which firm is still in operation today? </h2>
 				    	<ul>
-				    		<li><input type="radio" name="q9" value="incorrect"> Holabird &amp; Simonds </li>
+				    		<li><input type="radio" name="q9" value="incorrect"> Jensen &amp; Halstead </li>
 				    		<li><input type="radio" name="q9" value="incorrect"> Laurel &amp; Hardy </li>
 				    		<li><input type="radio" name="q9" value="incorrect"> Adler &amp; Sullivan </li>
 				    		<li><input type="radio" name="q9" value="incorrect"> Martin &amp; Lewis </li>
 				    		<li><input type="radio" name="q9" value="correct"> Holabird &amp; Root </li>
 						</ul>
 						
-			    	
-<ul>			    	</form>
+		    </form>
 	
 			
-			<div id="submit">
-				
+			<div class="test" id="submit">
 				<button type="button" class="submit">Can't Wait!!</button>
-			</div>
-		</div>
-	</div>
+			</div><!--close test-->
+		</main>
 
-
-
-	<footer>
-		<div class="mast_box">
-		<img src="assets/images/city.png" alt="city in blue">
-			<a href="https://github.com/intaglioplate312/week-4-game" target="_blank"><img src="assets/images/github_icon.svg" alt="github logo" width="30" height="30"></a>
-			<a href="https://justofflakeshoredrive.com" target="_blank"><h5> justofflsd.com </h5></a>
-		</div><!--closesmast_box-->
-	</footer>
-
-
-
+		<div class="footer_box" id="finish">
+			<h4> Tally (Ho!!) </h3>
+				<h5 id="correct"></h5>
+	    		<h5 id="incorrect"></h5>
+	    		<h5 id="missed"></h5>
+	    			<br>
+	    			<br>
+	    			<a href="https://intaglioplate312.github.io/Trivia_Game" target="_blank"><img src="assets/images/github_icon.svg" alt="github logo" width="30" height="30"></a>
+					<a href="https://justofflakeshoredrive.com" target="_blank"><h6 id="end"> </h6></a>
+		</div><!-- close footer_box-->
+		
 </body>
+
 </html>

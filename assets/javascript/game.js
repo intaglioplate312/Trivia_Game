@@ -1,31 +1,26 @@
-
-$(document).ready(function() {
-//rethinking one day reprieve
-//To start, hide then show
+$(document).ready(function(){
+    //The hiding and showing of different content, so as to create a cleaner user interface.
     $("#main-content").hide();
-    // start button, start timer
+    $("#finish").hide();
     $(".start").click(function(){
         $(".start").hide();
-        // show questions
         $("#main-content").show();
         $("#finish").hide();
     });
-    // stop timer
     $("#submit").click(function(){
-        // clear questions
         $("#main-content").hide();
         $("#finish").show();
     });
-    
-//Declaring variables 
+
+//Global variables to be used throughout the rest of the jQuery code.
 var correctAnswer = 0;
 var incorrectAnswer = 0;
 var missedAnswer = 0;
 var time = 45;
-//Subtract 1 from the timer every second.
+//Setting a variable to equal an interval, which will essentially subtract 1 from the timer every second.
 var timer = setInterval(countDown, 1000);
 
-//The function that works with the timer on the game.  Once the time reaches 0, certain content will clear out, to allow for the scoring div to appear.
+    //Timer function and ends function then show and tell for tally
     function countDown(){
         time = time - 1;
         if (time <= 0){
@@ -35,41 +30,22 @@ var timer = setInterval(countDown, 1000);
             $("#finish").show();
 
         }
-        //This replaces the element in the HTML of "countDown" to alert the user of how many seconds are remaining.
-        document.getElementById("countDown").innerHTML = "The Clock is Ticking!! " + time + " seconds remaining";
+        //id=countDown" required by homework timer.
+        document.getElementById("countDown").innerHTML = " Tick Tock !! <br> " + time + " seconds remaining";
 
     };
-
 
     //Submit button, to end game.
     $("#submit").click(function(){
         $("#main-content").hide();
         stats();
     });
-// stop timer
-// clear questions
-//The function that will clear out the timer once the user is finished.
+
+    //The function that will clear out the timer if timer runs out.
     function clear(){
         clearInterval(timer);
     };
-
-// You'll create a trivia form with multiple choice or true/false options (your choice).
-//The player will have a limited amount of time to finish the quiz. 
-// The game ends when the time runs out. The page will reveal the number of questions that players answer correctly and incorrectly.
-//Timer logic
-
-
-
-
-
-//  Call timer
-//  $(".test").click(function () {
-//  var timer = 20;
-//  display = document.querySelector('#time');
-//  startTimer(timer, display);
-//  });
-
-//MDN sample to try if time allows
+    //MDN sample to try if time allows
     //$( "input[type=radio].tags" ).val(function( index, value ) {
     //return value.trim();
     //});
@@ -90,28 +66,17 @@ var timer = setInterval(countDown, 1000);
                 }else if (radio.value === "incorrect" && radio.checked){
                     incorrectAnswer++
                 } // else if radio.value === ("incorrect" || "correct") && radio.checked){
-                //missedAns++
+                //missedAnswers++
                 //}
 
             }
-      console.log(correctAnswer);
-      console.log(incorrectAnswer)
-      console.log(missedAnswer)
-          
-// run function to add all on clicks matching true and return as "you matched"
-// add all clicks matching false or none retun as "you missed"
-// reset using different quesitons, if time allows
+        }
 
-// You'll create a trivia form with multiple choice or true/false options (your choice).
-
-//The player will have a limited amount of time to finish the quiz. 
-
-// The game ends when the time runs out. The page will reveal the number of questions that players answer correctly and incorrectly.
-
-//Don't let the player pick more than one answer per question.
-
-//Don't forget to include a countdown timer.
-
- }); //ends (document).ready(function() frome line 1 
-
-
+        //Adding text to the HTML, to indicate to the user the amount of correct and incorrect answers he or she has.
+        $("#correct").html( correctAnswer + " correct answers<br>Grab a drink on the 95th.");
+        $("#incorrect").html( incorrectAnswer + " missed answers<br>The CAF has a great walking tours. ");
+        //unable to make for loop do calculations,out of time!!
+        $("#missed").html((9 - (correctAnswer + incorrectAnswer)) + " unchecked answers<br>Usually best to avoid potholes.");
+        $("#end").html("justofflsd.com");
+    }
+});
