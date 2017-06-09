@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function(){
     //The hiding and showing of different content, so as to create a cleaner user interface.
     $("#main-content").hide();
     $("#finish").hide();
@@ -33,7 +33,7 @@ var timer = setInterval(countDown, 1000);
         //id=countDown" required by homework timer.
         document.getElementById("countDown").innerHTML = " Tick Tock !! <br> " + time + " seconds remaining";
 
-    };
+    }
 
     //Submit button, to end game.
     $("#submit").click(function(){
@@ -44,7 +44,7 @@ var timer = setInterval(countDown, 1000);
     //The function that will clear out the timer if timer runs out.
     function clear(){
         clearInterval(timer);
-    };
+    }
     //MDN sample to try if time allows
     //$( "input[type=radio].tags" ).val(function( index, value ) {
     //return value.trim();
@@ -61,10 +61,10 @@ var timer = setInterval(countDown, 1000);
                 var radio = radios[n];
                 //If the input is clicked, and correct, it will add 1 to the users correct answer count.
                 if (radio.value === "correct" && radio.checked){
-                    correctAnswer++
+                    correctAnswer++;
                 //However, if the input is clicked, and incorrect, it will add 1 to the users incorrect answer count.
                 }else if (radio.value === "incorrect" && radio.checked){
-                    incorrectAnswer++
+                    incorrectAnswer++;
                 } // else if radio.value === ("incorrect" || "correct") && radio.checked){
                 //missedAnswers++
                 //}

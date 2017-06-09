@@ -1,6 +1,6 @@
 * {
 	margin: auto;
-	overflow: hidden;
+	overflow: scroll;
 }
 
 
@@ -65,7 +65,7 @@ main {
 	padding: 10px;
 	margin-top: 10px;
 	border-radius: 20px;
-	border-color: #496B79, solid, 12px;
+	border: 12px, solid,  #496B79;
 }
 
 /* logo*/
@@ -160,10 +160,11 @@ img {
 }
 
 button {
-	border-color: # 324953;
-	background-image: #86C4DF;
+	border-color: #324953;
+	background-color: #86C4DF;
 	align-content: center;
 }
+
 #submit {
 	align-content: center;
 }
